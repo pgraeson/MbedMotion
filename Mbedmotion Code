@@ -1,0 +1,19 @@
+#include "mbed.h"
+
+DigitalOut led1(LED1);
+AnalogIn Sensor1(p20);
+
+// main() runs in its own thread in the OS
+int main() {
+
+  
+    while (true) 
+    {
+    if (Sensor1 <= 0.2)
+         { led1 = 1; }
+                
+        else 
+        {  led1 = 0; }
+    }
+ }   
+   
